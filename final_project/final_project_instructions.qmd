@@ -1,0 +1,134 @@
+---
+title: "Python Basics & Beyond Final Project: Statistics Dashboard with Quarto"
+format:
+  html:
+    link-external-newwindow: true
+author: "The GRAPH Courses"
+---
+
+## Overview
+
+For your final project, you will build a multi-page Quarto dashboard that explores and visualizes real-world data, then give a **short live presentation and defense** of your work. This is an opportunity to consolidate your skills in data manipulation, visualization, and dashboard creation, while creating a portfolio-worthy project that you can share with future employers.
+
+## Timeline
+
+| Date | Session | Activity |
+|------|---------|----------|
+| Mar 23 | 10 | Final project introduced |
+| Mar 30 | 11 | **Checkpoint day** — bring your work-in-progress for feedback and help |
+| Apr 6 | 12 | **Final project presentations** |
+
+## Checkpoint & Feedback Session (Mar 30)
+
+Session 11 will be dedicated to getting feedback and mentorship on your project. Try to have at least a working draft of your dashboard by then so you can get the most out of the session.
+
+## Project Requirements
+
+### Data Selection
+
+- Choose at least **two indicators** from [Gapminder's data repository](https://gapminder.org/data){target="_blank" rel="noopener"}.
+- You can subset to a single year or include multiple years in your analysis.
+- If you would rather work with alternative datasets, perhaps those more relevant to your work, send an email to us at trainingteam@thegraphnetwork.org with your proposal. As long as your final dashboard meets the rubric requirements below, it could be a good alternative.
+
+### Dashboard Structure
+
+Your dashboard should contain **at least three pages**, with at least the following:
+
+1. First Indicator Analysis
+2. Second Indicator Analysis
+3. Relationship between the two indicators. No statistical analysis is required; this can be purely descriptive/graphical.
+
+### Technical Requirements
+
+- The dashboard should include at least **12 display elements**.
+- Elements include:
+  - Value boxes
+  - Interactive plots
+  - Tables
+  - Maps
+  - Text boxes with descriptions of key insights
+- You should demonstrate your ability to use a range of pandas methods/functions. (Polars or Ibis are also acceptable.)
+- You should demonstrate your ability to create a range of plotly visualizations. (Matplotlib, plotnine, seaborn, etc. are also acceptable.)
+
+## Presentation & Defense (Apr 6) {#presentation-defense}
+
+On the final day, you will give a **short live presentation** of your dashboard (~5 minutes), followed by **1–2 questions** from the instructor/TA about your code and design choices. The goal is to verify that you understand the code you wrote and can explain the decisions you made.
+
+If you **cannot attend** the live session: **email us** at trainingteam@thegraphnetwork.org with a **brief explanation of why you cannot join** the presentation day. Then record a short video (for example with [Loom](https://www.loom.com){target="_blank" rel="noopener"} or any screen-recording tool) that follows the same structure below—walk through your dashboard and cover the same points you would in person—and **post the video link on the submission page** next to your deployed dashboard link. After we review your video, **we may schedule a short (~10 minute) Zoom** with you if we need clarification about your code or design choices—this serves the same purpose as the in-session Q&A.
+
+We recommend the following structure:
+
+1. **Brief introduction** — What data did you choose and why? (~1 minute)
+2. **Live demo of your dashboard** — Walk through the main pages, highlighting key visualizations and insights (~3 minutes)
+3. **Wrap-up** — Mention any limitations or things you would improve if you had more time (~1 minute)
+4. **Q&A** — The instructor/TA will ask 1–2 questions about your code or choices (~3 minutes)
+
+
+## Submission Instructions
+
+1. **Upload your Quarto file** (`.qmd`) to the submission page.
+2. **Provide a link** to the deployed dashboard on GitHub Pages.
+3. **Present live** during the session, **or**—if you cannot attend—follow the alternate steps in [Presentation & Defense](#presentation-defense) (email, recorded walkthrough on the submission page, possible brief Zoom).
+
+## Grading Rubric (100 points)
+
+### Data Selection and Manipulation (20 points)
+- Relevant data selected from Gapminder or approved alternative source
+- Data files are properly cleaned without errors or inconsistencies
+- Datasets are correctly merged when needed
+- Shows evidence of mastery of a range of pandas methods/functions
+
+### Dashboard Structure (15 points)
+- Contains required three pages (first indicator, second indicator, relationship)
+- Layout is logical, easy to navigate, and makes effective use of space
+- Design choices enhance understanding of the content
+
+### Visualization Elements (25 points)
+- Dashboard includes at least 12 display elements (value boxes, plots, tables, maps, etc.)
+- Plots have clear titles, labels, and appropriate scales
+- Interactive features (e.g., hover-over text) function correctly and display clear and useful information
+- Visual elements have titles or text boxes that explain the key insights
+- Appropriate choice of visualization types for the data
+
+### Code Quality (10 points)
+- Code is well-organized and readable
+- Code runs without errors
+- Efficient use of functions and operations
+- Consistent formatting and style
+
+### Deployment and Structure (10 points)
+- Dashboard is successfully deployed to GitHub Pages
+- Files are logically organized in repository
+- Repository contains only necessary files
+
+### Presentation & Defense (10 points)
+- Clear, well-organized walkthrough of the dashboard
+- Able to explain code logic and design choices when asked (live or in a brief follow-up Zoom, if scheduled)
+- Demonstrates genuine understanding of the tools and techniques used
+
+### Originality, Creativity, and Insight (10 points)
+- Original approaches to dashboard design, visualization, or interaction
+- Demonstrates thoughtful exploration of the data
+- Presents interesting patterns or relationships
+
+## Frequently Asked Questions
+
+### What if my dashboard doesn't work perfectly?
+
+That's okay! Part of the presentation is discussing what didn't work well and what you would improve. Honest reflection on limitations is valued.
+
+### Can I present a work-in-progress?
+
+Ideally your dashboard should be complete, but it's okay if some parts are still rough. Be clear about what's preliminary and what your next steps would be.
+
+### How strict is the time limit?
+
+We'll aim for about 5 minutes for the presentation plus a couple of minutes for questions. Practice your timing to make sure you cover the key points.
+
+### What kind of questions will be asked?
+
+The questions are designed to check that you understand your own code. For example: "Why did you choose this type of plot here?" or "How did you merge these two datasets?"
+
+### What if I miss the live presentation?
+
+See [Presentation & Defense](#presentation-defense) for the alternate process (email with a brief reason, recorded walkthrough on the submission page, and possible short follow-up Zoom in place of live Q&A).ate 
