@@ -72,8 +72,19 @@ def classify_disease_focus(abstract):
     {abstract}
     """
     return llm_chat(prompt)
+```
 
+Before running this on the whole dataset, let's test it on a single abstract to see what the output looks like:
 
+```{python}
+test_abstract = "We conducted a randomized controlled trial to evaluate a new insulin regimen for patients with type 2 diabetes, measuring its effect on long-term blood glucose control."
+
+classify_disease_focus(test_abstract)
+```
+
+Now that we've confirmed the function works, let's vectorize it so we can apply it to an entire column, then run it on every abstract in the `papers` DataFrame:
+
+```{python}
 # Vectorize the function so we can apply it to an entire column
 classify_disease_focus_vec = np.vectorize(classify_disease_focus)
 
@@ -119,19 +130,31 @@ jobs = __________________________
 
 We will use the LLM to extract the minimum years of experience required from job descriptions.
 
-We have written the prompt for you. Vectorize the function, then apply it on the `job_description` column of the dataframe. Create a column called `years_required` in the dataframe to store the results.
+We have written the prompt for you. First, run the chunk below to define the function:
 
 ```{python}
 def yrs_exp(description):
     prompt = f"""
-    Extract the minimum years of experience required from this job description. 
+    Extract the minimum years of experience required from this job description.
     Return ONLY a number. If a range is given, return the lower number.
     If no years of experience are explicitly mentioned, return 'NA'.
     Here's the job description:
     {description}
     """
     return llm_chat(prompt)
+```
 
+Now test the function on a single short job description to see what it returns:
+
+```{python}
+test_description = "We are seeking a data analyst with at least 3 years of experience working with Python and SQL in a healthcare setting."
+
+yrs_exp(test_description)
+```
+
+Now vectorize the function and apply it on the `job_description` column of the dataframe. Create a column called `years_required` in the dataframe to store the results.
+
+```{python}
 # Vectorize the function
 
 # Apply the function to the dataset
@@ -172,10 +195,31 @@ Now, create a function that asks the model about the programming languages menti
 
 Apply your function to the dataset and create a new column `lang_req` in the dataframe to store the results.
 
-```{python}
-# Define the function here
+First, define the function. We've given you the function name and signature to get you started — you write the prompt:
 
+```{python}
+def classify_lang(description):
+    prompt = f"""
+    # Your prompt here
+    {description}
+    """
+    return llm_chat(prompt)
+```
+
+Now test your function on a single short job description to see what it returns:
+
+```{python}
+test_description = "Looking for a statistician comfortable building dashboards in R and writing reproducible analysis pipelines."
+
+# Run your function on test_description here
+classify_lang(test_description)
+```
+
+Now vectorize the function (we've written this for you) and apply it on the `job_description` column. Store the results in a new column called `lang_req`:
+
+```{python}
 # Vectorize the function
+classify_lang_vec = np.vectorize(classify_lang)
 
 # Apply the function to the dataset
 
@@ -198,7 +242,7 @@ Create a box plot comparing salary distributions across the different programmin
 
 Write a few sentences describing any patterns you see in the plot. (Note that this is a very small sample of jobs, so don't read too much into the results.)
 
-# Optional Challenge: Most common technical skills overall 
+# Optional Ungraded Challenge: Most common technical skills overall
 
 Use an LLM function to extract the most common technical skills mentioned in job descriptions, then create a visualization to illuminate the most common technical skills.
 
