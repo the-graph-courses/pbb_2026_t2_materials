@@ -115,9 +115,7 @@ papers.to_csv("data/epi_papers_disease_focus.csv", index=False)
 
 Now that you’ve seen a mini-introduction to classification with epidemiology papers, let’s move on to the main dataset for this workshop: **job postings** scraped from Glassdoor. 
 
-Download it from the website and place it in an appropriate location in your folder. 
-
-Load the data into a pandas dataframe:
+Load the data into a pandas dataframe from the `data` folder:
 
 ```{python}
 # Your code here
