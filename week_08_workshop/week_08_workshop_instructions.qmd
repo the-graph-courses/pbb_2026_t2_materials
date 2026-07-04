@@ -42,52 +42,9 @@ tb['total_cost'] = ...
 
 # 2. Investigating Healthcare Costs by Education Level
 
-## 2.1. Reorder Education Levels
+## 2.1. Table of Costs by Education Level
 
-Before moving further, let's take a closer look at the `education` variable in our dataset:
-
-```{python}
-# Count unique values of education levels
-tb["education"].value_counts()
-```
-
-You'll notice that education levels are ordered in descending order by default. However, in this case, we want to reorder the education levels so that they are arranged in a chronological order (lower education levels come first).
-
-First, some quick cleaning: use the `replace()` method to convert the "Graduate & Above" values to "Graduate".
-
-```{python}
-tb["education"] = ...
-```
-
-Now, run the code below to reorder the education levels by converting the `education` variable into a categorical variable with the levels defined in a specific order:
-
-```{python}
-education_levels = [
-    "No Education",
-    "Primary",
-    "Middle",
-    "Secondary",
-    "Higher Secondary",
-    "Graduate",
-    "Missing",
-]
-
-tb["education"] = pd.Categorical(
-    tb["education"], categories=education_levels, ordered=True
-)
-```
-
-Now, inspect the `education` variable again to make sure it has been reordered correctly:
-
-```{python}
-tb["education"].value_counts()
-```
-
-We will use the newly transformed `education` variable for grouping, summarizing, and plotting below.
-
-## 2.2. Table of Costs by Education Level
-
-Let's compare the cost of treatment at different health facilities using a summary table. Use pandas methods to group by `education level` and create a summary table with two variables:
+Let's compare the cost of treatment across different education levels using a summary table. Use pandas methods to group by `education level` and create a summary table with two variables:
 
 - The number of patients in each `education level`
 - The mean total cost for each `education level`
@@ -123,9 +80,9 @@ YOUR ANSWER HERE
 
 Below, we will visualize the data with a plot to see if there is a relationship between education level and healthcare costs.
 
-## 2.3. Visualize Costs by Education Level
+## 2.2. Visualize Costs by Education Level
 
-Using `plotly.express` and the costs summary table you created earlier, create a bar plot of mean costs by education level. It should be sorted from lowest education level to highest education level.
+Using `plotly.express` and the costs summary table you created earlier, create a bar plot of mean costs by education level.
 
 ```{python}
 # Your code here
