@@ -53,7 +53,7 @@ tb["education"].value_counts()
 
 You'll notice that education levels are ordered in descending order by default. However, in this case, we want to reorder the education levels so that they are arranged in a chronological order (lower education levels come first).
 
-First, use the `replace()` method to convert the "Graduate & Above" values to "Graduate".
+First, some quick cleaning: use the `replace()` method to convert the "Graduate & Above" values to "Graduate".
 
 ```{python}
 tb["education"] = ...
@@ -87,12 +87,23 @@ We will use the newly transformed `education` variable for grouping, summarizing
 
 ## 2.2. Table of Costs by Education Level
 
-Let's compare the cost of treatment at different health facilities using a summary table. Use pandas methods to group by education level and create a summary table with two variables:
+Let's compare the cost of treatment at different health facilities using a summary table. Use pandas methods to group by `education level` and create a summary table with two variables:
 
-- The number of patients in each education level
-- The mean total cost for each education level
+- The number of patients in each `education level`
+- The mean total cost for each `education level`
 
 Store the resulting DataFrame as an object called `edu_cost_table`.
+
+Reminder: in the prework you used this pattern to summarize grouped data. This time, use `count` and `mean` as the summary functions:
+
+```{python}
+# | eval: false
+(
+    yao.groupby("sex")
+    .agg(mean_age=("age", "mean"), median_age=("age", "median"))
+    .reset_index()
+)
+```
 
 ```{python}
 # Create summary table
@@ -106,7 +117,7 @@ Reorder the rows of the summary table to go from highest to lowest mean cost. Yo
 edu_cost_table = ...
 ```
 
-Which education level has the highest mean total cost of treatment?
+Which `education level` has the highest mean total cost of treatment?
 
 YOUR ANSWER HERE
 
