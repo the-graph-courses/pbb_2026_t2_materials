@@ -10,6 +10,16 @@ author: "The GRAPH Courses"
 
 For your final project, you will build a multi-page Quarto dashboard that explores and visualizes real-world data, then give a **short live presentation and defense** of your work. This is an opportunity to consolidate your skills in data manipulation, visualization, and dashboard creation, while creating a portfolio-worthy project that you can share with future employers.
 
+::: {.callout-important}
+## Special instruction for UNODA/BWC-sponsored students
+
+**If you are sponsored by the UNODA Biological Weapons Convention (BWC) programme, your final project must include at least one health-security or biosecurity-relevant Gapminder indicator from this preset list: [Gapminder biosecurity-relevant variables](https://github.com/the-graph-courses/misc_public/blob/main/unoda/gapminder_biosecurity_relevant_variables.md){target="_blank" rel="noopener"}. 
+
+More details about this are described below.
+
+If you are not sure whether this applies to you, this usually means students on a 100% scholarship/ who did not pay for the course.**
+:::
+
 ## Timeline
 
 | Date | Session | Activity |
@@ -27,8 +37,9 @@ Session 11 will be dedicated to getting feedback and mentorship on your project.
 ### Data Selection
 
 - Choose at least **two indicators** from [Gapminder's data repository](https://gapminder.org/data){target="_blank" rel="noopener"}.
+- **UNODA/BWC-sponsored students:** at least one of your indicators must be a health-security or biosecurity-relevant indicator from this list: [Gapminder biosecurity-relevant variables](https://github.com/the-graph-courses/misc_public/blob/main/unoda/gapminder_biosecurity_relevant_variables.md){target="_blank" rel="noopener"}. These indicators come from the full Gapminder dataset and are available by country and year.
 - You can subset to a single year or include multiple years in your analysis.
-- If you would rather work with alternative datasets, perhaps those more relevant to your work, send an email to us at trainingteam@thegraphnetwork.org with your proposal. As long as your final dashboard meets the rubric requirements below, it could be a good alternative.
+- If you would rather work with alternative datasets, perhaps those more relevant to your work, send an email to us at trainingteam@thegraphnetwork.org with your proposal. As long as your final dashboard meets the rubric requirements below, it could be a good alternative. If you are a UNODA/BWC-sponsored student, please also explain how your proposed dataset keeps the project relevant to health security or biosecurity.
 
 ### Dashboard Structure
 
@@ -74,6 +85,7 @@ We recommend the following structure:
 
 ### Data Selection and Manipulation (20 points)
 - Relevant data selected from Gapminder or approved alternative source
+- For UNODA/BWC-sponsored students, includes at least one approved health-security or biosecurity-relevant indicator
 - Data files are properly cleaned without errors or inconsistencies
 - Datasets are correctly merged when needed
 - Shows evidence of mastery of a range of pandas methods/functions
